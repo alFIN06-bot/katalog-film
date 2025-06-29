@@ -1,0 +1,179 @@
+/* ========== Global Theme ========== */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+
+:root {
+  --primary: #9000ff; /* Purple */
+  --secondary: #ff2cfb; /* Magenta/Pink */
+  --bg-light: #0a0f1c; /* Dark Blue */
+  --bg-dark: #040612; /* Very Dark Blue */
+  --text-color: #e0f7ff; /* Off-white/Light Blue */
+  --accent-glow: 0 0 12px var(--primary);
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(135deg, var(--bg-light), var(--bg-dark));
+  background-attachment: fixed;
+  color: var(--text-color);
+  transition: background 0.4s, color 0.4s;
+}
+
+/* ========== Typography & Links ========== */
+h1, h2, h3, h4, h5 {
+  color: var(--primary);
+  text-shadow: 0 0 10px var(--primary);
+  font-weight: 600;
+}
+
+a {
+  color: var(--primary); /* Default link color from primary variable */
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--secondary);
+  text-shadow: 0 0 6px var(--secondary);
+}
+
+/* Active link styling for navigation */
+.active-link {
+  color: var(--primary) !important; /* Ensure primary color */
+  font-weight: 600;
+  text-decoration: underline;
+  text-shadow: 0 0 8px var(--primary);
+}
+
+/* ========== Buttons ========== */
+button, .btn-primary, .btn-secondary {
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  color: #000; /* Changed to black for better contrast on light primary/secondary */
+  border: none;
+  border-radius: 10px;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  transition: transform 0.2s, box-shadow 0.3s ease;
+  box-shadow: 0 0 12px var(--primary);
+}
+
+button:hover, .btn-primary:hover, .btn-secondary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px var(--secondary);
+}
+
+/* Filter button active state */
+.filter-button.active {
+  background-color: var(--primary); /* Use primary color for active filter button */
+  color: #000; /* Black text on primary background */
+  box-shadow: 0 0 15px var(--primary);
+}
+
+/* ========== Form Fields ========== */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select,
+textarea {
+  background-color: #0f1a2b;
+  border: 1px solid var(--primary);
+  color: var(--text-color);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  transition: box-shadow 0.3s, border 0.3s;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  box-shadow: 0 0 12px var(--primary);
+  border-color: var(--secondary);
+}
+
+/* ========== Cards & Containers ========== */
+.card {
+  background-color: #0f1a2b;
+  border: 1px solid var(--primary);
+  box-shadow: 0 0 15px var(--primary);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 25px var(--secondary);
+}
+
+/* ========== Utility ========== */
+.glow-border {
+  border: 1px solid var(--primary);
+  box-shadow: 0 0 15px var(--primary);
+  border-radius: 10px;
+}
+
+.futuristic-heading {
+  font-size: 2.25rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--primary);
+  text-shadow: 0 0 10px var(--primary);
+}
+
+.table,
+th,
+td {
+  border-color: var(--primary);
+}
+
+.shadow,
+nav,
+.rounded-xl {
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+}
+
+/* Specific adjustments for dark mode text colors if needed, though Tailwind's dark: classes should handle it */
+.dark .text-gray-800 {
+  color: var(--text-color);
+}
+
+.dark .text-gray-600 {
+  color: var(--text-color);
+}
+
+.dark .text-gray-300 {
+  color: var(--text-color);
+}
+
+.dark .text-gray-700 {
+  color: var(--text-color);
+}
+
+.dark .text-gray-200 {
+  color: var(--text-color);
+}
+
+/* Custom status colors for transaction table */
+.status-selesai {
+  color: #22c55e; /* green-500 */
+}
+
+.dark .status-selesai {
+  color: #86efac; /* green-300 */
+}
+
+.status-pending {
+  color: #eab308; /* yellow-500 */
+}
+
+.dark .status-pending {
+  color: #fde047; /* yellow-300 */
+}
+
+.status-dibatalkan {
+  color: #ef4444; /* red-500 */
+}
+
+.dark .status-dibatalkan {
+  color: #fca5a5; /* red-300 */
+}

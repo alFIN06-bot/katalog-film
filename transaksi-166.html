@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transaksi - CINEPIWWW</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: 'var(--primary)',
+              secondary: 'var(--secondary)',
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="styles-166.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <script src="script-166.js" defer></script>
+  </head>
+  <body
+    class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-300"
+  >
+    <nav
+      class="bg-white dark:bg-gray-900 shadow px-6 py-4 flex justify-between items-center"
+    >
+      <div class="text-xl font-bold text-primary">
+        <span>CINEPIWWW</span>
+      </div>
+      <div class="space-x-4 hidden md:flex">
+        <a href="index.html" class="text-primary">
+          <i class="fas fa-home mr-2"></i>Beranda
+        </a>
+        <a href="katalog-166.html" class="text-primary">
+          <i class="fas fa-film mr-2"></i>Katalog
+        </a>
+        <a href="transaksi-166.html" class="text-primary">
+          <i class="fas fa-receipt mr-2"></i>Transaksi
+        </a>
+        <a href="login-166.html" class="text-primary">
+          <i class="fas fa-sign-in-alt mr-2"></i>Login
+        </a>
+      </div>
+      <div class="hidden md:block">
+        <a href="profile-166.html" class="profile-link">
+          <img
+            src="https://i.scdn.co/image/75447d3644a78f052d46e33f9d9d214017b81ced"
+            alt="Profile"
+            class="w-10 h-10 rounded-full object-cover border-2 border-primary"
+          />
+        </a>
+      </div>
+      <button id="mobileMenuButton" class="md:hidden text-gray-700 dark:text-gray-200">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </nav>
+
+    <div
+      id="mobileMenu"
+      class="mobile-menu hidden md:hidden bg-white dark:bg-gray-800 shadow-lg py-4 px-6 space-y-4"
+    >
+      <a href="index.html" class="mobile-link block text-primary">
+        <i class="fas fa-home mr-2"></i>Beranda
+      </a>
+      <a href="katalog-166.html" class="mobile-link block text-primary">
+        <i class="fas fa-film mr-2"></i>Katalog
+      </a>
+      <a href="transaksi-166.html" class="mobile-link block text-primary">
+        <i class="fas fa-receipt mr-2"></i>Transaksi
+      </a>
+      <a href="profile-166.html" class="mobile-link block text-primary">
+        <i class="fas fa-user-circle mr-2"></i>Profile
+      </a>
+      <a href="login-166.html" class="mobile-link block text-primary">
+        <i class="fas fa-sign-in-alt mr-2"></i>Login
+      </a>
+    </div>
+
+    <main class="p-6">
+      <h1 class="text-3xl font-bold mb-4 text-center">Transaksi Anda</h1>
+      <p class="text-center mb-8 text-white">
+        Kelola langganan dan riwayat pembayaran Anda
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <h2 class="text-xl font-semibold mb-4">Buat Transaksi Baru</h2>
+          <div
+            class="border border-gray-200 dark:border-gray-700 p-4 rounded-xl shadow bg-white dark:bg-slate-800"
+          >
+            <form id="transactionForm" class="space-y-4">
+              <div>
+                <label for="transactionId" class="block mb-2">ID Transaksi</label>
+                <input
+                  type="text"
+                  id="transactionId"
+                  name="transactionId"
+                  required
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-primary focus:outline-none pl-10"
+                  placeholder="Contoh: TRX-20240718-001"
+                />
+              </div>
+              <div>
+                <label for="transactionDate" class="block mb-2">Tanggal</label>
+                <input
+                  type="date"
+                  id="transactionDate"
+                  name="transactionDate"
+                  required
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-primary focus:outline-none pl-10"
+                />
+              </div>
+              <div>
+                <label for="packageType" class="block mb-2">Pilih Paket</label>
+                <select
+                  id="packageType"
+                  name="packageType"
+                  required
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-primary focus:outline-none bg-white dark:bg-slate-800 pl-10"
+                >
+                  <option value="">-- Pilih Paket --</option>
+                  <option value="Basic">Basic (Rp49.000 / bulan)</option>
+                  <option value="Premium">Premium (Rp99.000 / bulan)</option>
+                </select>
+              </div>
+              <div>
+                <label for="paymentStatus" class="block mb-2">Status Pembayaran</label>
+                <select
+                  id="paymentStatus"
+                  name="paymentStatus"
+                  required
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-primary focus:outline-none bg-white dark:bg-slate-800 pl-10"
+                >
+                  <option value="">-- Pilih Status --</option>
+                  <option value="Selesai">Selesai</option>
+                  <option value="Pending">Pending</option>
+                  <option value="Dibatalkan">Dibatalkan</option>
+                </select>
+              </div>
+              <button
+                type="submit"
+                class="w-full py-3 bg-primary text-black rounded-lg hover:bg-sky-700 transition-colors inline-flex items-center justify-center"
+              >
+                <i class="fas fa-plus-circle mr-2"></i> Tambah Transaksi
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold mb-4">Riwayat Transaksi</h2>
+          <div class="overflow-x-auto">
+            <table class="min-w-full text-sm border dark:border-slate-700">
+              <thead class="bg-gray-100 dark:bg-slate-800 rounded-lg">
+                <tr>
+                  <th class="px-4 py-2 text-left">ID</th>
+                  <th class="px-4 py-2 text-left">Tanggal</th>
+                  <th class="px-4 py-2 text-left">Paket</th>
+                  <th class="px-4 py-2 text-left">Status</th>
+                </tr>
+              </thead>
+              <tbody id="transactionTableBody" class="bg-white dark:bg-slate-900 rounded-lg">
+                <tr class="border-t dark:border-slate-700">
+                  <td class="px-4 py-2">#TRX-7890</td>
+                  <td class="px-4 py-2">15 Mar 2023</td>
+                  <td class="px-4 py-2">Premium</td>
+                  <td class="px-4 py-2 status-selesai">Selesai</td>
+                </tr>
+                <tr class="border-t dark:border-slate-700">
+                  <td class="px-4 py-2">#TRX-7889</td>
+                  <td class="px-4 py-2">14 Feb 2023</td>
+                  <td class="px-4 py-2">Basic</td>
+                  <td class="px-4 py-2 status-selesai">Selesai</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

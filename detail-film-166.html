@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CINEPIWWW - Detail Film</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: 'var(--primary)',
+              secondary: 'var(--secondary)',
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="styles-166.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="script-166.js" defer></script>
+  </head>
+  <body
+    class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-300"
+  >
+    <nav
+      class="bg-white dark:bg-gray-900 shadow px-6 py-4 flex justify-between items-center"
+    >
+      <div class="text-xl font-bold text-primary">
+        <span>CINEPIWWW</span>
+      </div>
+      <div class="space-x-4 hidden md:flex">
+        <a href="index.html" class="text-primary">
+          <i class="fas fa-home mr-2"></i>Beranda
+        </a>
+        <a href="katalog-166.html" class="text-primary">
+          <i class="fas fa-film mr-2"></i>Katalog
+        </a>
+        <a href="transaksi-166.html" class="text-primary">
+          <i class="fas fa-receipt mr-2"></i>Transaksi
+        </a>
+        <a href="login-166.html" class="text-primary">
+          <i class="fas fa-sign-in-alt mr-2"></i>Login
+        </a>
+      </div>
+      <div class="hidden md:block">
+        <a href="profile-166.html" class="profile-link">
+          <img
+            src="https://i.scdn.co/image/75447d3644a78f052d46e33f9d9d214017b81ced"
+            alt="Profile"
+            class="w-10 h-10 rounded-full object-cover border-2 border-primary"
+          />
+        </a>
+      </div>
+      <button id="mobileMenuButton" class="md:hidden text-gray-700 dark:text-gray-200">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </nav>
+
+    <div
+      id="mobileMenu"
+      class="mobile-menu hidden md:hidden bg-white dark:bg-gray-800 shadow-lg py-4 px-6 space-y-4"
+    >
+      <a href="index.html" class="mobile-link block text-primary">
+        <i class="fas fa-home mr-2"></i>Beranda
+      </a>
+      <a href="katalog-166.html" class="mobile-link block text-primary">
+        <i class="fas fa-film mr-2"></i>Katalog
+      </a>
+      <a href="transaksi-166.html" class="mobile-link block text-primary">
+        <i class="fas fa-receipt mr-2"></i>Transaksi
+      </a>
+      <a href="profile-166.html" class="mobile-link block text-primary">
+        <i class="fas fa-user-circle mr-2"></i>Profile
+      </a>
+      <a href="login-166.html" class="mobile-link block text-primary">
+        <i class="fas fa-sign-in-alt mr-2"></i>Login
+      </a>
+    </div>
+
+    <main class="container mx-auto p-6">
+      <section class="mb-12 text-center">
+        <h1 class="text-3xl font-bold mb-4 text-primary">Detail Film</h1>
+      </section>
+
+      <div id="filmDetailContainer" class="bg-white dark:bg-slate-800 rounded-xl shadow-md p-8">
+        <!-- Film details will be loaded here by JavaScript -->
+        <p class="text-center text-gray-600 dark:text-gray-300">Memuat detail film...</p>
+      </div>
+    </main>
+  </body>
+</html>
